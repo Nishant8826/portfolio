@@ -15,13 +15,11 @@ export class PortfolioComponent implements OnInit {
   isCollapsed: boolean = true;
   filtering: boolean = false;
   //Tags 
-  python: boolean = false;
   nodejs: boolean = false;
   angular: boolean = false;
   react: boolean = false;
   css: boolean = false;
   bootstrap: boolean = false;
-  javascript: boolean = false;
   typescript: boolean = false;
 
   constructor(private titleService: Title, private projectService: ProjectsService) {
@@ -35,9 +33,6 @@ export class PortfolioComponent implements OnInit {
   filter() {
     let filterTags: Tag[] = [];
 
-    if (this.python) {
-      filterTags.push(Tag.PYTHON);
-    }
     if (this.nodejs) {
       filterTags.push(Tag.NODEJS);
     }
@@ -53,9 +48,6 @@ export class PortfolioComponent implements OnInit {
     if (this.css) {
       filterTags.push(Tag.CSS);
     }
-    if (this.javascript) {
-      filterTags.push(Tag.JAVASCRIPT);
-    }
     if (this.typescript) {
       filterTags.push(Tag.TYPESCRIPT);
     }
@@ -69,15 +61,12 @@ export class PortfolioComponent implements OnInit {
   }
 
   resetFilter() {
-    this.python = false;
     this.nodejs = false;
     this.angular = false;
     this.react = false;
     this.css = false;
     this.bootstrap = false;
-    this.javascript = false;
     this.typescript = false;
-
     this.projects = this.projectService.getProjects();
     this.filtering = false;
   }
