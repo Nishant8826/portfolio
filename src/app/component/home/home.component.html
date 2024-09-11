@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <!--About Me-->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>About me</h2>
+                <img src="../../../assets/my-pic.jpg" alt="" height="256px" class="rounded-circle">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo perspiciatis, laboriosam minima,
+                    laborum eum dolore eos eveniet fugiat iusto eaque velit dolores repellat quam odit provident maiores
+                    repudiandae quo! Natus.</p>
+            </div>
+        </div>
+        <!--Featured Project-->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>Featured Projects</h2>
+                <h2>{{featureProject.name}}</h2>
+            </div>
+
+            <carousel [interval]="myInterval">
+                <div *ngFor="let picture of featureProject.pictures">
+                    <slide><img src={{picture}} alt="slide" style="width: 100%;display: block;"></slide>
+                </div>
+            </carousel>
+
+            <p class="mt-2">{{featureProject.summary}}</p>
+            <p>Visit the Porfolio section to learn more!</p>
+        </div>
+    </div>
+</div>

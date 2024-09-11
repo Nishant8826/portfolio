@@ -1,0 +1,59 @@
+<div class="container">
+
+    <div class="mb-2">
+        <div>
+            <button class="btn btn-outline-primary mt-2 mb-2 me-2" (click)="isCollapsed =!isCollapsed">Filter</button>
+            <button class="btn btn-outline-secondary mt-2 mb-2" (click)="resetFilter()"
+                [hidden]="!filtering">Reset</button>
+        </div>
+        <div [collapse]="isCollapsed" [isAnimated]="true">
+            <form>
+                <div class="form-group  overflow-auto" style="width: fit-content;">
+                    <div class="form-check d-inline-block me-2">
+                        <input type="checkbox" class="form-check-input position-statis me-2" (change)="filter()"
+                            [(ngModel)]="nodejs" name="Nodejs">
+                        <label class="form-check-label small">Nodejs</label>
+                    </div>
+                    <div class="form-check d-inline-block me-2">
+                        <input type="checkbox" class="form-check-input position-statis me-2" (change)="filter()"
+                            [(ngModel)]="python" name="Python">
+                        <label class="form-check-label small">Python</label>
+                    </div>
+                    <div class="form-check d-inline-block me-2">
+                        <input type="checkbox" class="form-check-input position-statis me-2" (change)="filter()"
+                            [(ngModel)]="typescript" name="Typescript">
+                        <label class="form-check-label small">Typescript</label>
+                    </div>
+                    <div class="form-check d-inline-block me-2">
+                        <input type="checkbox" class="form-check-input position-statis me-2" (change)="filter()"
+                            [(ngModel)]="javascript" name="Javascript">
+                        <label class="form-check-label small">Javascript</label>
+                    </div>
+                    <div class="form-check d-inline-block me-2">
+                        <input type="checkbox" class="form-check-input position-statis me-2" (change)="filter()"
+                            [(ngModel)]="angular" name="Angular">
+                        <label class="form-check-label small">Angular</label>
+                    </div>
+                    <div class="form-check d-inline-block me-2">
+                        <input type="checkbox" class="form-check-input position-statis me-2" (change)="filter()"
+                            [(ngModel)]="bootstrap" name="Boostrap">
+                        <label class="form-check-label small">Bootstrap</label>
+                    </div>
+                    <div class="form-check d-inline-block me-2">
+                        <input type="checkbox" class="form-check-input position-statis me-2" (change)="filter()"
+                            [(ngModel)]="react" name="React">
+                        <label class="form-check-label small">React</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div *ngFor="let project of projects" class="col-lg-4 col-md-6 mb-2 mt-2"
+            style="max-width: 380px;min-width: 380px;">
+            <app-project-cards [project]="project"></app-project-cards>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,56 @@
+<div class="container mt-5">
+    <form #formData="ngForm" (ngSubmit)="submitForm(formData)">
+        <div class="mb-1">
+            <label for="name" class="form-label">Name*</label>
+            <input type="text" class="form-control" id="name" ngModel name="name" required minlength="3"
+                pattern="^[a-zA-Z\s]*$">
+            <div *ngIf="formData.controls['name']?.touched && formData.controls['name'].errors?.['required']"
+                class="text-danger">
+                Name is required
+            </div>
+            <div *ngIf="formData.controls['name']?.touched && formData.controls['name'].errors?.['minlength']"
+                class="text-danger">
+                Name must be at least 3 characters long
+            </div>
+            <div *ngIf="formData.controls['name']?.touched && formData.controls['name'].errors?.['pattern']"
+                class="text-danger">
+                Name must contain only letters and spaces
+            </div>
+        </div>
+        <div class="mb-1">
+            <label for="email" class="form-label">Email*</label>
+            <input type="email" class="form-control" id="email" ngModel name="email" required
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+            <div *ngIf="formData.controls['email']?.touched && formData.controls['email'].errors?.['required']"
+                class="text-danger">
+                Email is required
+            </div>
+            <div *ngIf="formData.controls['email']?.touched && formData.controls['email'].errors?.['pattern']"
+                class="text-danger">
+                Please enter a valid email address
+            </div>
+        </div>
+        <div class="mb-1">
+            <label for="phone" class="form-label">Phone*</label>
+            <input type="tel" class="form-control" id="phone" ngModel name="phone" required pattern="[0-9]{10}"
+                maxlength="10" (keydown)="onPhoneKeyDown($event)">
+            <div *ngIf="formData.controls['phone']?.touched && formData.controls['phone'].errors?.['required']"
+                class="text-danger">
+                Phone is required
+            </div>
+            <div *ngIf="formData.controls['phone']?.touched && formData.controls['phone'].errors?.['pattern']"
+                class="text-danger">
+                Please enter a valid 10-digit phone number
+            </div>
+        </div>
+        <div class="mb-2">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" ngModel name="message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="formData.invalid">Submit</button>
+        <!-- Success message -->
+        <div *ngIf="formSubmittedSuccessfully" class="alert alert-success mt-3">
+            Request sent successfully!
+        </div>
+    </form>
+</div>
