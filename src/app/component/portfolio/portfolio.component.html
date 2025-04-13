@@ -34,6 +34,21 @@
                             [(ngModel)]="react" name="React">
                         <label class="form-check-label small">React</label>
                     </div>
+                    <div class="form-check d-inline-block me-2">
+                        <input type="checkbox" class="form-check-input position-statis me-2" (change)="filter()"
+                            [(ngModel)]="socket" name="Socket.IO">
+                        <label class="form-check-label small">Socket.IO</label>
+                    </div>
+                    <div class="form-check d-inline-block me-2">
+                        <input type="checkbox" class="form-check-input position-statis me-2" (change)="filter()"
+                            [(ngModel)]="googleAuth" name="GoogleAuth">
+                        <label class="form-check-label small">Google Auth</label>
+                    </div>
+                    <div class="form-check d-inline-block me-2">
+                        <input type="checkbox" class="form-check-input position-statis me-2" (change)="filter()"
+                            [(ngModel)]="materialUI" name="materialUI">
+                        <label class="form-check-label small">Material UI</label>
+                    </div>
                 </div>
             </form>
         </div>

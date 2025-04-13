@@ -21,6 +21,9 @@ export class PortfolioComponent implements OnInit {
   css: boolean = false;
   bootstrap: boolean = false;
   typescript: boolean = false;
+  socket: boolean = false;
+  googleAuth: boolean = false;
+  materialUI: boolean = false;
 
   constructor(private titleService: Title, private projectService: ProjectsService) {
     this.titleService.setTitle('Portfolio');
@@ -50,6 +53,15 @@ export class PortfolioComponent implements OnInit {
     }
     if (this.typescript) {
       filterTags.push(Tag.TYPESCRIPT);
+    }
+    if (this.socket) {
+      filterTags.push(Tag.SOCKETIO);
+    }
+    if (this.googleAuth) {
+      filterTags.push(Tag.OAuth2);
+    }
+    if (this.materialUI) {
+      filterTags.push(Tag.MATERIALUI);
     }
 
     this.projects = this.projectService.GetProjectsByFilter(filterTags);

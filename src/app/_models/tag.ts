@@ -9,6 +9,9 @@ export class Tag {
     static readonly JAVASCRIPT = new Tag('Javascript', 'gray');
     static readonly HTML = new Tag('HTML', 'purple');
     static readonly PYTHON = new Tag('Python', 'pink');
+    static readonly MATERIALUI = new Tag('Material_ui', '#1E85EB');
+    static readonly SOCKETIO = new Tag('Socket.IO', '#21AF90');
+    static readonly OAuth2 = new Tag('Google Auth', '#DF8382');
 
     constructor(private readonly key: string, public readonly color: string) {
 
