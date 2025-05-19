@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { DomSanitizer, Title, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-resume',
@@ -8,8 +8,12 @@ import { Title } from '@angular/platform-browser';
 })
 export class ResumeComponent {
 
-  constructor(private titleService : Title){
+  pdfSrc: SafeResourceUrl;
+
+  constructor(private titleService: Title, private sanitizer: DomSanitizer) {
     this.titleService.setTitle('Portfolio - Resume');
+    const url = 'assets/Resume.pdf';
+    this.pdfSrc = this.sanitizer.bypassSecurityTrustResourceUrl(url);
   };
-  
+
 }
