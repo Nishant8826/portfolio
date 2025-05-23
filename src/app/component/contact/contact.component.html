@@ -1,5 +1,7 @@
-<div class="container mt-5">
-    <form #formData="ngForm" (ngSubmit)="submitForm(formData)">
+<div *ngIf="showForm" class="container mt-5">
+    <form #formData="ngForm"
+        action="https://script.google.com/macros/s/AKfycbyOMh_ORyyEs2tElxocEsWY3psd_LntjohhkR_c5tXEZcWvVVRhhdi_b-dcU0dmg_HPdA/exec"
+        method="POST" (ngSubmit)="submitForm(formData)">
         <div class="mb-1">
             <label for="name" class="form-label">Name*</label>
             <input type="text" class="form-control" id="name" ngModel name="name" required minlength="3"
@@ -48,9 +50,28 @@
             <textarea class="form-control" id="message" ngModel name="message"></textarea>
         </div>
         <button type="submit" class="btn btn-primary" [disabled]="formData.invalid">Submit</button>
-        <!-- Success message -->
-        <div *ngIf="formSubmittedSuccessfully" class="alert alert-success mt-3">
-            Request sent successfully!
-        </div>
     </form>
+</div>
+
+
+<!-- Loader Overlay -->
+<div *ngIf="loading" class="loader-overlay">
+    <div class="spinner"></div>
+</div>
+
+<!-- Success message -->
+<div *ngIf="formSubmittedSuccessfully && !loading">
+    <div class="alert alert-success mt-3">
+        Success! Your submission is complete. Click <a href="#"
+            (click)="contactAgain();$event.preventDefault()">Back</a> to return to
+        the previous page.
+    </div>
+</div>
+
+
+
+
+<!-- Error message -->
+<div *ngIf="errorMessage && !loading" class="alert alert-danger mt-3">
+    {{ errorMessage }}
 </div>

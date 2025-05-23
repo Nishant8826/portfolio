@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Tag } from '../_models/tag';
 import { project } from '../_models/project';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,10 +12,16 @@ export class ProjectsService {
 
   constructor(private http: HttpClient) { }
 
-  private scriptUrl = 'https://sheet.best/api/sheets/de0c0ee7-3e6e-414b-8128-7d344591b9aa';
+  private scriptUrl = 'https://script.google.com/macros/s/AKfycbyOMh_ORyyEs2tElxocEsWY3psd_LntjohhkR_c5tXEZcWvVVRhhdi_b-dcU0dmg_HPdA/exec';
 
-  saveFormData(formData: any): Observable<any> {
-    return this.http.post(this.scriptUrl, formData);
+  submitForm(formData: any): Observable<any> {
+    const body = new HttpParams()
+      .set('name', formData.name)
+      .set('email', formData.email)
+      .set('phone', formData.phone)
+      .set('message', formData.message || '');
+
+    return this.http.post(this.scriptUrl, body, { responseType: 'text' });
   }
 
   projects: project[] = [

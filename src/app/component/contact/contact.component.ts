@@ -9,26 +9,43 @@ import { ProjectsService } from 'src/app/_services/projects.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  showForm: boolean = true;
   formData: any = {}; // Initialize formData
-  formSubmittedSuccessfully: boolean = false;
+  loading = false;
+  formSubmittedSuccessfully = false;
+  errorMessage = '';
 
   constructor(private titleService: Title, private project: ProjectsService) {
     this.titleService.setTitle('Portfolio - Contact');
   };
 
-  submitForm(formData: NgForm) {
-    console.log(formData.value); // Here you can process the form data as required
-    this.project.saveFormData(formData.value).subscribe({
-      next: (data) => {
-        console.log('data::', data);
-        this.resetForm(formData);
-        this.formSubmittedSuccessfully = true;
-        console.log('Form submitted successfully');
-      }, error: (error) => {
-        console.log('Error occured : ', error)
-      }
-    })
 
+  submitForm(form: NgForm) {
+    if (form.valid) {
+      this.loading = true;
+      this.errorMessage = '';
+      this.formSubmittedSuccessfully = false;
+      this.project.submitForm(form.value).subscribe(
+        response => {
+          this.loading = false;
+          this.formSubmittedSuccessfully = true;
+          form.resetForm();
+          this.showForm = false;
+          console.log('Success:', response);
+        },
+        error => {
+          this.loading = false;
+          this.showForm = false;
+          this.errorMessage = 'Something went wrong. Please try again later.';
+          console.error('Error!', error);
+        }
+      );
+    }
+  }
+
+  contactAgain() {
+    this.showForm = true;
+    this.formSubmittedSuccessfully = false;
   }
 
   onPhoneKeyDown(event: KeyboardEvent) {
