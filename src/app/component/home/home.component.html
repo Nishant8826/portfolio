@@ -1,34 +1,74 @@
 <div class="container">
     <div class="row">
-        <!--About Me-->
+        <!-- About Me -->
         <div class="col-lg shadow border m-1">
             <div class="text-center">
-                <h2>About me</h2>
-                <img src="../../../assets/my-pic.jpg" alt="" height="256px" class="rounded-circle">
-                <p style="margin: 1rem 0;font-size: 14px;">I am a passionate and detail-oriented Software Engineer with
-                    hands-on experience in building scalable
-                    web and mobile applications using a modern technology stack. I specialize in front-end development
-                    with HTML, CSS, JavaScript, Angular, and React/React-Native, and have robust back-end expertise with
-                    Node.js and SQL. I’m also experienced in NoSQL databases like MongoDB, cross-platform mobile
-                    development using Ionic, and deploying applications on AWS. I enjoy solving complex problems and
-                    delivering user-centric solutions that drive performance and efficiency.</p>
+                <div class="mb-4"></div>
+                <img src="../../../assets/my-pic.jpg" alt="" height="256px" class="rounded-circle fade-in" />
+
+                <p style="margin: 1rem 0; font-size: 14px;font-weight: 600;">
+                    Passionate Full Stack Developer with expertise in MEAN/MERN stack, creating innovative web solutions
+                    and applications.
+                </p>
+
+                <!-- Get in Touch Buttons -->
+                <div class="d-flex justify-content-center gap-3 flex-wrap mb-3 fade-in delay-1">
+                    <a href="https://www.linkedin.com/in/nishant-rathore-3445b4217" target="_blank"
+                        class="btn contact-btn btn-outline-primary" title="Connect on LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="https://github.com/Nishant8826" target="_blank" class="btn contact-btn btn-outline-dark"
+                        title="View GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="https://wa.me/8800784843" target="_blank" class="btn contact-btn btn-outline-success"
+                        title="Chat on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
+                    <a href="mailto:rnishant428@gmail.com" class="btn contact-btn btn-outline-danger"
+                        title="Send Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
             </div>
         </div>
-        <!--Featured Project-->
+
+
+
+        <!-- Skills -->
         <div class="col-lg shadow border m-1">
             <div class="text-center">
-                <h2>Featured Projects</h2>
-                <h2>{{featureProject.name}}</h2>
-            </div>
+                <div class="mb-4"></div>
 
-            <carousel [interval]="myInterval">
-                <div *ngFor="let picture of featureProject.pictures">
-                    <slide><img src={{picture}} alt="slide" style="width: 100%;display: block;"></slide>
+                <!-- Buttons -->
+                <div class="btn-group mb-3" role="group" aria-label="Skill categories">
+                    <button type="button" class="btn" [class.active]="selectedCategory === 'frontend'"
+                        (click)="selectCategory('frontend')">
+                        Frontend
+                    </button>
+                    <button type="button" class="btn" [class.active]="selectedCategory === 'backend'"
+                        (click)="selectCategory('backend')">
+                        Backend
+                    </button>
+                    <button type="button" class="btn" [class.active]="selectedCategory === 'other'"
+                        (click)="selectCategory('other')">
+                        Other
+                    </button>
                 </div>
-            </carousel>
 
-            <p class="mt-2">{{featureProject.summary}}</p>
-            <p>Visit the Porfolio section to learn more!</p>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3 justify-content-center px-3">
+                    <div class="col" *ngFor="let skill of filteredSkills">
+                        <div class="card skill-card text-center p-3">
+                            <i [class]="skill.icon + ' fa-2x mb-2'" [ngClass]="skill.color"></i>
+                            <h6>{{ skill.name }}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

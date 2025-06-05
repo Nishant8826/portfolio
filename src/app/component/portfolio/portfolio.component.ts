@@ -12,7 +12,7 @@ import { ProjectsService } from 'src/app/_services/projects.service';
 export class PortfolioComponent implements OnInit {
 
   projects: any = [];
-  isCollapsed: boolean = true;
+  isCollapsed: boolean = false;
   filtering: boolean = false;
   //Tags 
   nodejs: boolean = false;

@@ -1,0 +1,121 @@
+.btn-group .btn {
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #444;
+  background-color: #e9ecef;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 0.3rem;
+  min-width: 110px;
+  cursor: pointer;
+}
+
+.btn-group .btn:hover {
+  background-color: #d0e2ff;
+  color: #0056b3;
+}
+
+.btn-group .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.btn-group .btn.active {
+  background-color: #007bff !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.6);
+  border-color: #007bff !important;
+}
+
+
+.skill-card {
+  padding: 1rem !important;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card i.fa-2x {
+  font-size: 2rem;
+  transition: font-size 0.3s ease;
+}
+
+.btn-group .btn {
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  min-width: 90px;
+}
+
+@media (max-width: 576px) {
+  .skill-card i.fa-2x {
+    font-size: 1.6rem;
+  }
+
+  .skill-card h6 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .btn-group .btn {
+    flex: 1 1 auto;
+    min-width: auto;
+  }
+}
+
+.btn-group .btn.active {
+  background-color: #007bff !important;
+  color: white !important;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
+  border-color: #007bff !important;
+}
+
+@media (max-width: 576px) {
+  .skill-card {
+    padding: 1.5rem !important;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.fade-in.delay-1 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.contact-btn {
+  border-radius: 50px;
+  padding: 0.6rem 0.9rem;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
