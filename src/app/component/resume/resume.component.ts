@@ -12,7 +12,7 @@ export class ResumeComponent {
 
   constructor(private titleService: Title, private sanitizer: DomSanitizer) {
     this.titleService.setTitle('Portfolio - Resume');
-    const url = 'assets/Resume.pdf';
+    const url = 'assets/Nishant-Rathore-SD2.pdf';
     this.pdfSrc = this.sanitizer.bypassSecurityTrustResourceUrl(url);
   };
 

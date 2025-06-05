@@ -17,6 +17,7 @@ import { ProjectModalComponent } from './component/project-modal/project-modal.c
 import { CollapseModule } from "ngx-bootstrap/collapse"
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { GetInTouchComponent } from './component/get-in-touch/get-in-touch.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     ResumeComponent,
     ContactComponent,
     ProjectCardsComponent,
-    ProjectModalComponent
+    ProjectModalComponent,
+    GetInTouchComponent
   ],
   imports: [
     BrowserModule,

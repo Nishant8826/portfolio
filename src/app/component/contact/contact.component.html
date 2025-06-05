@@ -1,77 +1,116 @@
-<div *ngIf="showForm" class="container mt-5">
-    <form #formData="ngForm"
-        action="https://script.google.com/macros/s/AKfycbyOMh_ORyyEs2tElxocEsWY3psd_LntjohhkR_c5tXEZcWvVVRhhdi_b-dcU0dmg_HPdA/exec"
-        method="POST" (ngSubmit)="submitForm(formData)">
-        <div class="mb-1">
-            <label for="name" class="form-label">Name*</label>
-            <input type="text" class="form-control" id="name" ngModel name="name" required minlength="3"
-                pattern="^[a-zA-Z\s]*$">
-            <div *ngIf="formData.controls['name']?.touched && formData.controls['name'].errors?.['required']"
-                class="text-danger">
-                Name is required
-            </div>
-            <div *ngIf="formData.controls['name']?.touched && formData.controls['name'].errors?.['minlength']"
-                class="text-danger">
-                Name must be at least 3 characters long
-            </div>
-            <div *ngIf="formData.controls['name']?.touched && formData.controls['name'].errors?.['pattern']"
-                class="text-danger">
-                Name must contain only letters and spaces
-            </div>
-        </div>
-        <div class="mb-1">
-            <label for="email" class="form-label">Email*</label>
-            <input type="email" class="form-control" id="email" ngModel name="email" required
-                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-            <div *ngIf="formData.controls['email']?.touched && formData.controls['email'].errors?.['required']"
-                class="text-danger">
-                Email is required
-            </div>
-            <div *ngIf="formData.controls['email']?.touched && formData.controls['email'].errors?.['pattern']"
-                class="text-danger">
-                Please enter a valid email address
-            </div>
-        </div>
-        <div class="mb-1">
-            <label for="phone" class="form-label">Phone*</label>
-            <input type="tel" class="form-control" id="phone" ngModel name="phone" required pattern="[0-9]{10}"
-                maxlength="10" (keydown)="onPhoneKeyDown($event)">
-            <div *ngIf="formData.controls['phone']?.touched && formData.controls['phone'].errors?.['required']"
-                class="text-danger">
-                Phone is required
-            </div>
-            <div *ngIf="formData.controls['phone']?.touched && formData.controls['phone'].errors?.['pattern']"
-                class="text-danger">
-                Please enter a valid 10-digit phone number
-            </div>
-        </div>
-        <div class="mb-2">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" ngModel name="message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" [disabled]="formData.invalid">Submit</button>
-    </form>
-</div>
+<div class="container">
+    <div class="d-flex flex-column flex-md-row gap-4 gap-md-5">
 
+        <div *ngIf="showForm" class="flex-grow-1">
+            <form #formData="ngForm"
+                action="https://script.google.com/macros/s/AKfycbyOMh_ORyyEs2tElxocEsWY3psd_LntjohhkR_c5tXEZcWvVVRhhdi_b-dcU0dmg_HPdA/exec"
+                method="POST" (ngSubmit)="submitForm(formData)" class="form-container">
+                <!-- Name -->
+                <div class="form-floating mb-3">
+                    <input type="text" id="name" class="form-control" name="name" ngModel required minlength="3"
+                        pattern="^[a-zA-Z\s]*$" [ngClass]="{
+              'is-invalid': formData.controls['name']?.touched && formData.controls['name'].invalid,
+              'is-valid': formData.controls['name']?.touched && formData.controls['name'].valid
+            }" />
+                    <label for="name">Name*</label>
+                    <div *ngIf="formData.controls['name']?.touched && formData.controls['name'].errors"
+                        class="invalid-feedback">
+                        <div *ngIf="formData.controls['name'].errors?.['required']">Name is required</div>
+                        <div *ngIf="formData.controls['name'].errors?.['minlength']">At least 3 characters</div>
+                        <div *ngIf="formData.controls['name'].errors?.['pattern']">Only letters and spaces allowed</div>
+                    </div>
+                </div>
 
-<!-- Loader Overlay -->
-<div *ngIf="loading" class="loader-overlay">
-    <div class="spinner"></div>
-</div>
+                <!-- Email -->
+                <div class="form-floating mb-3">
+                    <input type="email" id="email" class="form-control" name="email" ngModel required
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" [ngClass]="{
+              'is-invalid': formData.controls['email']?.touched && formData.controls['email'].invalid,
+              'is-valid': formData.controls['email']?.touched && formData.controls['email'].valid
+            }" />
+                    <label for="email">Email*</label>
+                    <div *ngIf="formData.controls['email']?.touched && formData.controls['email'].errors"
+                        class="invalid-feedback">
+                        <div *ngIf="formData.controls['email'].errors?.['required']">Email is required</div>
+                        <div *ngIf="formData.controls['email'].errors?.['pattern']">Invalid email format</div>
+                    </div>
+                </div>
 
-<!-- Success message -->
-<div *ngIf="formSubmittedSuccessfully && !loading">
-    <div class="alert alert-success mt-3">
-        Success! Your submission is complete. Click <a href="#"
-            (click)="contactAgain();$event.preventDefault()">Back</a> to return to
-        the previous page.
+                <!-- Phone -->
+                <div class="form-floating mb-3">
+                    <input type="tel" id="phone" class="form-control" name="phone" ngModel required maxlength="10"
+                        pattern="[0-9]{10}" (keydown)="onPhoneKeyDown($event)" [ngClass]="{
+              'is-invalid': formData.controls['phone']?.touched && formData.controls['phone'].invalid,
+              'is-valid': formData.controls['phone']?.touched && formData.controls['phone'].valid
+            }" />
+                    <label for="phone">Phone*</label>
+                    <div *ngIf="formData.controls['phone']?.touched && formData.controls['phone'].errors"
+                        class="invalid-feedback">
+                        <div *ngIf="formData.controls['phone'].errors?.['required']">Phone is required</div>
+                        <div *ngIf="formData.controls['phone'].errors?.['pattern']">Enter a valid 10-digit number</div>
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div class="form-floating mb-4">
+                    <textarea id="message" class="form-control" placeholder="Leave a message here" name="message"
+                        ngModel style="height: 100px"></textarea>
+                    <label for="message">Message</label>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="btn btn-gradient btn-lg w-100"
+                    [disabled]="formData.invalid">Submit</button>
+            </form>
+        </div>
+
+        <!-- Loader -->
+        <div *ngIf="loading" class="loader-overlay d-flex justify-content-center align-items-center">
+            <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+        </div>
+
+        <!-- Success -->
+        <div *ngIf="formSubmittedSuccessfully && !loading" class="alert alert-success mt-3 rounded shadow-sm"
+            style="height: fit-content;">
+            Success! Your submission is complete. Click
+            <a href="#" (click)="contactAgain(); $event.preventDefault()">Back</a> to return.
+        </div>
+
+        <!-- Error -->
+        <div *ngIf="errorMessage && !loading" class="alert alert-danger mt-3 rounded shadow-sm"
+            style="height: fit-content;">
+            {{ errorMessage }}
+        </div>
+
+        <div class="contact-information flex-grow-1">
+            <div class="inner-wrapper p-3">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li>
+                        <div class="icon-wrapper"><i class="bi bi-envelope-fill"></i></div>
+                        <div>
+                            <div class="contact-info-label">Email</div>
+                            {{ email }}
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-wrapper"><i class="bi bi-telephone-fill"></i></div>
+                        <div>
+                            <div class="contact-info-label">Phone</div>
+                            +91 (880) 078-4843
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-wrapper"><i class="bi bi-geo-alt-fill"></i></div>
+                        <div>
+                            <div class="contact-info-label">Address</div>
+                            Dabri Extension, New Delhi, India
+                        </div>
+                    </li>
+                </ul>
+                <app-get-in-touch></app-get-in-touch>
+            </div>
+        </div>
+
     </div>
-</div>
-
-
-
-
-<!-- Error message -->
-<div *ngIf="errorMessage && !loading" class="alert alert-danger mt-3">
-    {{ errorMessage }}
 </div>

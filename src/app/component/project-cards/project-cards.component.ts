@@ -11,17 +11,22 @@ import { ProjectModalComponent } from '../project-modal/project-modal.component'
 export class ProjectCardsComponent {
   @Input() project = {} as project;
   bsModalRef?: BsModalRef;
+  showAllTags = false;
 
   constructor(private modalService: BsModalService) { }
 
   openModalWithComponent() {
     const modelOptions: ModalOptions = {
       class: 'modal-lg',
-      initialState:{
-        project : this.project
+      initialState: {
+        project: this.project
       }
     };
-    this.bsModalRef = this.modalService.show(ProjectModalComponent , modelOptions);
+    this.bsModalRef = this.modalService.show(ProjectModalComponent, modelOptions);
+  }
+
+  toggleTags() {
+    this.showAllTags = !this.showAllTags;
   }
 
 }

@@ -10,10 +10,11 @@ import { ProjectsService } from 'src/app/_services/projects.service';
 })
 export class ContactComponent {
   showForm: boolean = true;
-  formData: any = {}; // Initialize formData
+  formData: any = {}; 
   loading = false;
   formSubmittedSuccessfully = false;
   errorMessage = '';
+  email:string = 'rnishant428@gmail.com'
 
   constructor(private titleService: Title, private project: ProjectsService) {
     this.titleService.setTitle('Portfolio - Contact');

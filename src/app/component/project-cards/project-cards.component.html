@@ -1,14 +1,22 @@
-<div class="card shadow text-center" style="max-width: 350px;min-width: 350px;">
+<div class="card shadow text-center" style="max-width: 350px; min-width: 350px;">
     <div class="card-body">
-        <h5 class="card-title">{{project.name}}</h5>
-        <p class="card-text">{{project.summary}}</p>
+        <h5 class="card-title">{{ project.name }}</h5>
+        <p class="card-text">{{ project.summary }}</p>
         <button class="btn btn-primary" (click)="openModalWithComponent()">View More</button>
     </div>
-    <div class="card-footer">
-        <div class="d-flex flex-wrap justify-content-center">
-            <div *ngFor="let tag of project.tags">
-                <div class="tag me-2 mb-1" [style.background-color]="tag.color">{{tag}}</div>
-            </div>
+
+    <div class="card-footer position-relative">
+        <div class="d-flex flex-wrap justify-content-center align-items-center">
+            <ng-container *ngFor="let tag of project.tags; let i = index">
+                <div *ngIf="showAllTags || i < 3" class="tag me-2 mb-1" [style.background-color]="tag.color">
+                    {{ tag }}
+                </div>
+            </ng-container>
         </div>
+
+        <button *ngIf="project.tags.length > 3" class="btn btn-sm p-0 border-0 bg-transparent" (click)="toggleTags()"
+            aria-label="Toggle Tags" style="position: absolute; right: 10px; bottom: 15px;">
+            <i class="bi" [ngClass]="showAllTags ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+        </button>
     </div>
 </div>
