@@ -24,6 +24,7 @@ export class PortfolioComponent implements OnInit {
   socket: boolean = false;
   googleAuth: boolean = false;
   materialUI: boolean = false;
+  genAI: boolean = false;
 
   constructor(private titleService: Title, private projectService: ProjectsService) {
     this.titleService.setTitle('Portfolio');
@@ -62,6 +63,9 @@ export class PortfolioComponent implements OnInit {
     }
     if (this.materialUI) {
       filterTags.push(Tag.MATERIALUI);
+    }
+    if (this.genAI) {
+      filterTags.push(Tag.GeminiApi);
     }
 
     this.projects = this.projectService.GetProjectsByFilter(filterTags);

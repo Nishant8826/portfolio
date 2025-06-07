@@ -1,34 +1,57 @@
+.col-lg.shadow.border.m-1 {
+  max-height: 420px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.scrollable-horizontal {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+
 .btn-group .btn {
   border-radius: 30px;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.4rem;
   font-weight: 600;
-  font-size: 1rem;
-  color: #444;
-  background-color: #e9ecef;
+  font-size: 0.95rem;
+  color: #333;
+  background-color: #fff;
   border: 1px solid #ddd;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   margin: 0 0.3rem;
   min-width: 110px;
   cursor: pointer;
-}
-
-.btn-group .btn:hover {
-  background-color: #d0e2ff;
-  color: #0056b3;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  z-index: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .btn-group .btn:focus {
   outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(49, 49, 49, 0.35);
+}
+
+.btn-group .btn::before {
+  content: none;
+}
+
+.btn-group .btn:hover {
+  color: #000;
+  box-shadow: 0 6px 18px rgba(234, 234, 234, 0.25);
+  border-color: #dadada;
 }
 
 .btn-group .btn.active {
-  background-color: #007bff !important;
-  color: white !important;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.6);
-  border-color: #007bff !important;
+  background: rgba(233, 236, 239, 0.95);
+  color: #000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-color: #cfd8dc;
+  backdrop-filter: blur(4px);
 }
-
 
 .skill-card {
   padding: 1rem !important;
@@ -48,11 +71,7 @@
   transition: font-size 0.3s ease;
 }
 
-.btn-group .btn {
-  padding: 0.4rem 1.2rem;
-  font-size: 0.9rem;
-  min-width: 90px;
-}
+
 
 @media (max-width: 576px) {
   .skill-card i.fa-2x {
@@ -78,12 +97,6 @@
   }
 }
 
-.btn-group .btn.active {
-  background-color: #007bff !important;
-  color: white !important;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
-  border-color: #007bff !important;
-}
 
 @media (max-width: 576px) {
   .skill-card {

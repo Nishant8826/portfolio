@@ -2,14 +2,21 @@
 
     <div class="mb-2">
         <div>
-            <button class="btn btn-outline-primary mt-2 mb-2 me-2" (click)="isCollapsed =!isCollapsed">Filter</button>
-            <button class="btn btn-outline-secondary mt-2 mb-2" (click)="resetFilter()"
+            <button class="btn btn-outline-secondary mt-2 mb-2 me-2" (click)="isCollapsed =!isCollapsed">Filter</button>
+            <button class="btn btn-outline-danger mt-2 mb-2" (click)="resetFilter()"
                 [hidden]="!filtering">Reset</button>
         </div>
         <div [collapse]="isCollapsed" [isAnimated]="true">
             <form>
                 <div class="form-group overflow-auto">
                     <div class="row" style="width: 100%;">
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" (change)="filter()" [(ngModel)]="genAI"
+                                    name="AI">
+                                <label class="form-check-label small">AI</label>
+                            </div>
+                        </div>
                         <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" (change)="filter()" [(ngModel)]="nodejs"
@@ -74,8 +81,7 @@
     </div>
 
     <div class="row">
-        <div *ngFor="let project of projects" class="col-lg-4 col-md-6 mb-2 mt-2"
-            style="max-width: 380px;min-width: 380px;">
+        <div *ngFor="let project of projects" class="col-lg-4 col-md-6 mb-2 mt-2 project-card-wrapper">
             <app-project-cards [project]="project"></app-project-cards>
         </div>
     </div>

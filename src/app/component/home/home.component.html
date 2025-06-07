@@ -3,8 +3,8 @@
         <!-- About Me -->
         <div class="col-lg shadow border m-1">
             <div class="text-center">
-                <div class="mb-4"></div>
-                <img src="../../../assets/my-pic.jpg" alt="" height="256px" class="rounded-circle fade-in" />
+                <div class="mb-3"></div>
+                <img src="../../../assets/my-pic.jpg" alt="" height="240px" class="rounded-circle fade-in" />
 
                 <p style="margin: 1rem 0; font-size: 14px;font-weight: 600;">
                     Passionate Full Stack Developer with expertise in MEAN/MERN stack, creating innovative web solutions
@@ -21,7 +21,7 @@
         <!-- Skills -->
         <div class="col-lg shadow border m-1">
             <div class="text-center">
-                <div class="mb-4"></div>
+                <div class="mb-2"></div>
 
                 <!-- Buttons -->
                 <div class="btn-group mb-3" role="group" aria-label="Skill categories">
@@ -40,7 +40,8 @@
                 </div>
 
 
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3 justify-content-center px-3">
+                <div
+                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3 justify-content-center px-3 mb-1 scrollable-horizontal">
                     <div class="col" *ngFor="let skill of filteredSkills">
                         <div class="card skill-card text-center p-3">
                             <i [class]="skill.icon + ' fa-2x mb-2'" [ngClass]="skill.color"></i>

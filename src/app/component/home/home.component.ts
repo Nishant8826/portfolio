@@ -32,6 +32,7 @@ export class HomeComponent {
     { name: 'REST APIs', icon: 'fas fa-plug', color: 'text-dark', category: 'backend' },
 
     // Other
+    { name: 'AI', icon: 'fas fa-robot', color: 'text-info', category: 'other' },
     { name: 'Git', icon: 'fab fa-git-alt', color: 'text-danger', category: 'other' },
     { name: 'Mercurial', icon: 'fas fa-code-branch', color: 'text-danger', category: 'other' },
     { name: 'Figma', icon: 'fab fa-figma', color: 'text-primary', category: 'other' },
