@@ -23,13 +23,13 @@ export class HomeComponent {
 
     // Backend
     { name: 'Node.js', icon: 'fab fa-node-js', color: 'text-success', category: 'backend' },
+    { name: 'Express', icon: 'fas fa-server', color: 'text-dark', category: 'backend' },
+    { name: 'REST APIs', icon: 'fas fa-plug', color: 'text-dark', category: 'backend' },
     { name: 'SQL', icon: 'fas fa-database', color: 'text-dark', category: 'backend' },
     { name: 'Knex.js', icon: 'fas fa-code', color: 'text-dark', category: 'backend' },
     { name: 'AWS', icon: 'fab fa-aws', color: 'text-warning', category: 'backend' },
-    { name: 'Express', icon: 'fas fa-server', color: 'text-dark', category: 'backend' },
     { name: 'MongoDB', icon: 'fas fa-leaf', color: 'text-success', category: 'backend' },
     { name: 'Mongoose', icon: 'fas fa-project-diagram', color: 'text-dark', category: 'backend' },
-    { name: 'REST APIs', icon: 'fas fa-plug', color: 'text-dark', category: 'backend' },
 
     // Other
     { name: 'AI', icon: 'fas fa-robot', color: 'text-info', category: 'other' },
@@ -39,6 +39,7 @@ export class HomeComponent {
     { name: 'MS Office', icon: 'fas fa-file-word', color: 'text-primary', category: 'other' },
     { name: 'Postman', icon: 'fas fa-paper-plane', color: 'text-warning', category: 'other' },
     { name: 'Redis', icon: 'fas fa-database', color: 'text-danger', category: 'other' },
+    { name: 'Jira/Confluence', icon: 'fas fa-tasks', color: 'text-primary', category: 'other' },
 
 
   ];
