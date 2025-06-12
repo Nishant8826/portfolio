@@ -9,12 +9,15 @@ import { ProjectsService } from 'src/app/_services/projects.service';
 })
 export class HomeComponent {
 
+  
+
   selectedCategory: string = 'frontend';
   skills = [
     // Frontend
     { name: 'HTML', icon: 'fab fa-html5', color: 'text-danger', category: 'frontend' },
     { name: 'CSS', icon: 'fab fa-css3-alt', color: 'text-primary', category: 'frontend' },
     { name: 'JavaScript', icon: 'fab fa-js', color: 'text-warning', category: 'frontend' },
+    { name: 'TypeScript', icon: 'fas fa-file-code', color: 'text-warning', category: 'frontend' },
     { name: 'jQuery', icon: 'fab fa-js-square', color: 'text-info', category: 'frontend' },
     { name: 'React', icon: 'fab fa-react', color: 'text-info', category: 'frontend' },
     { name: 'React Native', icon: 'fab fa-react', color: 'text-primary', category: 'frontend' },
@@ -30,15 +33,18 @@ export class HomeComponent {
     { name: 'AWS', icon: 'fab fa-aws', color: 'text-warning', category: 'backend' },
     { name: 'MongoDB', icon: 'fas fa-leaf', color: 'text-success', category: 'backend' },
     { name: 'Mongoose', icon: 'fas fa-project-diagram', color: 'text-dark', category: 'backend' },
+    { name: 'Socket.io', icon: 'fas fa-bolt', color: 'text-dark', category: 'backend' },
+    { name: 'Redis', icon: 'fas fa-database', color: 'text-danger', category: 'backend' },
 
     // Other
     { name: 'AI', icon: 'fas fa-robot', color: 'text-info', category: 'other' },
+    { name: 'Firebase', icon: 'fas fa-fire', color: 'text-warning', category: 'other' },
+    { name: 'Google Auth', icon: 'fab  fa-google', color: 'text-danger', category: 'other' },
     { name: 'Git', icon: 'fab fa-git-alt', color: 'text-danger', category: 'other' },
     { name: 'Mercurial', icon: 'fas fa-code-branch', color: 'text-danger', category: 'other' },
     { name: 'Figma', icon: 'fab fa-figma', color: 'text-primary', category: 'other' },
     { name: 'MS Office', icon: 'fas fa-file-word', color: 'text-primary', category: 'other' },
     { name: 'Postman', icon: 'fas fa-paper-plane', color: 'text-warning', category: 'other' },
-    { name: 'Redis', icon: 'fas fa-database', color: 'text-danger', category: 'other' },
     { name: 'Jira/Confluence', icon: 'fas fa-tasks', color: 'text-primary', category: 'other' },
 
 

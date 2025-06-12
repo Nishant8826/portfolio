@@ -25,6 +25,9 @@ export class PortfolioComponent implements OnInit {
   googleAuth: boolean = false;
   materialUI: boolean = false;
   genAI: boolean = false;
+  redux: boolean = false;
+  mongodb: boolean = false;
+  firebase: boolean = false;
 
   constructor(private titleService: Title, private projectService: ProjectsService) {
     this.titleService.setTitle('Portfolio');
@@ -66,6 +69,15 @@ export class PortfolioComponent implements OnInit {
     }
     if (this.genAI) {
       filterTags.push(Tag.GeminiApi);
+    }
+    if (this.mongodb) {
+      filterTags.push(Tag.MONGODB);
+    }
+    if (this.firebase) {
+      filterTags.push(Tag.FIREBASE);
+    }
+    if (this.redux) {
+      filterTags.push(Tag.REDUX);
     }
 
     this.projects = this.projectService.GetProjectsByFilter(filterTags);
