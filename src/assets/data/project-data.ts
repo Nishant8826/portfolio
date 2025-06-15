@@ -30,7 +30,7 @@ export const PROJECTS: project[] = [
         liveLink: "https://url-shortener-client-lake.vercel.app/",
         summary: "A scalable URL shortener service with a sleek UI, powered by MERN.",
         description: "Big Url Shortener lets you shorten lengthy URLs into convenient short links. Built with Node.js and Redis for fast storage and retrieval, React for a smooth UI, and Docker for simplified deployment, it efficiently converts URLs and tracks usage. Ideal for reducing messy URLs and sharing links effortlessly.",
-        tags: [Tag.NODEJS, Tag.REACT, Tag.REDIS, Tag.DOCKER]
+        tags: [Tag.NODEJS, Tag.REACT, Tag.REDIS, Tag.DOCKER,Tag.PSQL]
     },
     {
         id: 3,

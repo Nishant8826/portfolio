@@ -30,6 +30,7 @@ export class PortfolioComponent implements OnInit {
   firebase: boolean = false;
   redis: boolean = false;
   docker: boolean = false;
+  psql: boolean = false;
 
   constructor(private titleService: Title, private projectService: ProjectsService) {
     this.titleService.setTitle('Portfolio');
@@ -86,6 +87,9 @@ export class PortfolioComponent implements OnInit {
     }
     if (this.docker) {
       filterTags.push(Tag.DOCKER);
+    }
+    if (this.psql) {
+      filterTags.push(Tag.PSQL);
     }
 
     this.projects = this.projectService.GetProjectsByFilter(filterTags);

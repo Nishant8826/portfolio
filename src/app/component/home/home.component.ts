@@ -35,6 +35,8 @@ export class HomeComponent {
     { name: 'Mongoose', icon: 'fas fa-project-diagram', color: 'text-dark', category: 'backend' },
     { name: 'Socket.io', icon: 'fas fa-bolt', color: 'text-dark', category: 'backend' },
     { name: 'Redis', icon: 'fas fa-database', color: 'text-danger', category: 'backend' },
+    { name: 'Docker', icon: 'fab fa-docker', color: 'text-info', category: 'backend' },
+    { name: 'PostgreSQL', icon: 'fas fa-database', color: 'text-primary', category: 'backend' },
 
     // Other
     { name: 'AI', icon: 'fas fa-robot', color: 'text-info', category: 'other' },
