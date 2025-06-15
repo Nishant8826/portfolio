@@ -6,7 +6,7 @@ export const PROJECTS: project[] = [
         id: 0,
         name: "Code Reviewer",
         pictures: ["../../assets/code-reviewer-1.png", "../../assets/code-reviewer-2.png"],
-        projectLink: "https://github.com/Nishant8826",
+        projectLink: "https://github.com/Nishant8826/code-reviwer-client.git",
         liveLink: "https://code-reviwer-client.vercel.app/",
         summary: "AI-powered tool to automatically review and give feedback on code snippets.",
         description: "Code Reviewer is a web-based tool built with React and Node.js that uses AI to analyze JavaScript code and provide real-time feedback or suggestions. Users can write or paste code in a live editor and receive syntax-highlighted reviews on demand. It features a clean UI, Markdown rendering for formatted responses, OAuth2 authentication, and real-time updates with Socket.IO. Ideal for learners or developers looking to get quick insights into their code.",
@@ -24,6 +24,16 @@ export const PROJECTS: project[] = [
     },
     {
         id: 2,
+        name: "Big Url Shortner",
+        pictures: ["../../assets/big-ly.png"],
+        projectLink: "https://github.com/Nishant8826/url-shortener-client.git",
+        liveLink: "https://url-shortener-client-lake.vercel.app/",
+        summary: "A scalable URL shortener service with a sleek UI, powered by MERN.",
+        description: "Big Url Shortener lets you shorten lengthy URLs into convenient short links. Built with Node.js and Redis for fast storage and retrieval, React for a smooth UI, and Docker for simplified deployment, it efficiently converts URLs and tracks usage. Ideal for reducing messy URLs and sharing links effortlessly.",
+        tags: [Tag.NODEJS, Tag.REACT, Tag.REDIS, Tag.DOCKER]
+    },
+    {
+        id: 3,
         name: "Angular Quiz",
         pictures: ["../../assets/quiz-1.png", "../../assets/quiz-2.png", "../../assets/quiz-3.png", "../../assets/quiz-4.png"],
         projectLink: "https://github.com/Nishant8826/QuizByAngular.git",
@@ -33,7 +43,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.ANGULAR, Tag.BOOTSTRAP, Tag.TYPESCRIPT]
     },
     {
-        id: 3,
+        id: 4,
         name: "To Do",
         pictures: ["../../assets/to-do.png"],
         projectLink: "https://github.com/Nishant8826/Angular-todo.git",
@@ -43,7 +53,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.ANGULAR, Tag.BOOTSTRAP, Tag.TYPESCRIPT]
     },
     {
-        id: 4,
+        id: 5,
         name: "Daily Goals",
         pictures: ["../../assets/daily-goals.png"],
         projectLink: "https://github.com/Nishant8826/reactProjects/tree/DailyGoals",
@@ -53,7 +63,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.REACT, Tag.CSS]
     },
     {
-        id: 5,
+        id: 6,
         name: "Techy Star",
         pictures: ["../../assets/techy-1.png", "../../assets/techy-2.png", "../../assets/techy-3.png", "../../assets/techy-4.png", "../../assets/techy-5.png"],
         projectLink: "https://github.com/Nishant8826/reactProjects/tree/techyStar",
@@ -63,7 +73,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.REACT, Tag.CSS]
     },
     {
-        id: 6,
+        id: 7,
         name: "Vedio Hub",
         pictures: ["../../assets/vedio-hub-1.png", "../../assets/vedio-hub-2.png"],
         projectLink: "https://github.com/Nishant8826/reactProjects/tree/vedioHub",
@@ -73,7 +83,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.REACT, Tag.CHAKRAUI]
     },
     {
-        id: 7,
+        id: 8,
         name: "Ecommerce",
         pictures: ["../../assets/soon.png"],
         projectLink: "https://github.com/Nishant8826/ecommerce.git",

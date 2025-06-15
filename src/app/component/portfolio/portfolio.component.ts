@@ -28,6 +28,8 @@ export class PortfolioComponent implements OnInit {
   redux: boolean = false;
   mongodb: boolean = false;
   firebase: boolean = false;
+  redis: boolean = false;
+  docker: boolean = false;
 
   constructor(private titleService: Title, private projectService: ProjectsService) {
     this.titleService.setTitle('Portfolio');
@@ -78,6 +80,12 @@ export class PortfolioComponent implements OnInit {
     }
     if (this.redux) {
       filterTags.push(Tag.REDUX);
+    }
+    if (this.redis) {
+      filterTags.push(Tag.REDIS);
+    }
+    if (this.docker) {
+      filterTags.push(Tag.DOCKER);
     }
 
     this.projects = this.projectService.GetProjectsByFilter(filterTags);

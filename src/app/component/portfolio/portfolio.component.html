@@ -94,6 +94,20 @@
                                 <label class="form-check-label small">Material UI</label>
                             </div>
                         </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" (change)="filter()"
+                                    [(ngModel)]="redis" name="MaterialUI">
+                                <label class="form-check-label small">Redis</label>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" (change)="filter()"
+                                    [(ngModel)]="docker" name="MaterialUI">
+                                <label class="form-check-label small">Docker</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

@@ -17,6 +17,9 @@ export class Tag {
     static readonly FIREBASE = new Tag('Firebase', '#FFCA28'); // Firebase yellow
     static readonly STRIPE = new Tag('Stripe', '#635BFF'); // Stripe blue-violet
     static readonly MONGODB = new Tag('MongoDB', '#47A248'); // Mongo green
+    static readonly PSQL = new Tag('PostgreSQL', '#336791'); // PostgreSQL blue
+    static readonly REDIS = new Tag('Redis', '#D82C20'); // Redis red
+    static readonly DOCKER = new Tag('Docker', '#2496ED'); // Docker blue
 
     constructor(private readonly key: string, public readonly color: string) { }
 
