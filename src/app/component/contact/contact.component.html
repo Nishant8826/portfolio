@@ -1,7 +1,10 @@
 <div class="container">
     <div class="d-flex flex-column flex-md-row gap-4 gap-md-5">
 
-        <div *ngIf="showForm" class="flex-grow-1">
+        <!-- <div class="col g-4 g-md-5"> -->
+
+
+        <div *ngIf="showForm" class="col-12 col-md-6">
             <form #formData="ngForm"
                 action="https://script.google.com/macros/s/AKfycbyOMh_ORyyEs2tElxocEsWY3psd_LntjohhkR_c5tXEZcWvVVRhhdi_b-dcU0dmg_HPdA/exec"
                 method="POST" (ngSubmit)="submitForm(formData)" class="form-container">
@@ -17,7 +20,8 @@
                         class="invalid-feedback">
                         <div *ngIf="formData.controls['name'].errors?.['required']">Name is required</div>
                         <div *ngIf="formData.controls['name'].errors?.['minlength']">At least 3 characters</div>
-                        <div *ngIf="formData.controls['name'].errors?.['pattern']">Only letters and spaces allowed</div>
+                        <div *ngIf="formData.controls['name'].errors?.['pattern']">Only letters and spaces allowed
+                        </div>
                     </div>
                 </div>
 
@@ -47,7 +51,8 @@
                     <div *ngIf="formData.controls['phone']?.touched && formData.controls['phone'].errors"
                         class="invalid-feedback">
                         <div *ngIf="formData.controls['phone'].errors?.['required']">Phone is required</div>
-                        <div *ngIf="formData.controls['phone'].errors?.['pattern']">Enter a valid 10-digit number</div>
+                        <div *ngIf="formData.controls['phone'].errors?.['pattern']">Enter a valid 10-digit number
+                        </div>
                     </div>
                 </div>
 
@@ -65,19 +70,24 @@
         </div>
 
         <!-- Loader -->
-        <div *ngIf="loading" class="loader-overlay d-flex justify-content-center align-items-center">
-            <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+        <div *ngIf="loading" class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <div class="dot-wave-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
 
         <!-- Success -->
-        <div *ngIf="formSubmittedSuccessfully && !loading" class="alert alert-success mt-3 rounded shadow-sm"
-            style="height: fit-content;">
+        <div *ngIf="formSubmittedSuccessfully && !loading"
+            class="col-12 col-md-6 alert alert-success mt-3 rounded shadow-sm" style="height: fit-content;">
             Success! Your submission is complete. Click
             <a href="#" (click)="contactAgain(); $event.preventDefault()">Back</a> to return.
         </div>
 
         <!-- Error -->
-        <div *ngIf="errorMessage && !loading" class="alert alert-danger mt-3 rounded shadow-sm"
+        <div *ngIf="errorMessage && !loading" class="col-12 col-md-6 alert alert-danger mt-3 rounded shadow-sm"
             style="height: fit-content;">
             {{ errorMessage }}
         </div>
@@ -111,6 +121,8 @@
                 <app-get-in-touch></app-get-in-touch>
             </div>
         </div>
+
+        <!-- </div> -->
 
     </div>
 </div>

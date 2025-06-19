@@ -9,7 +9,7 @@ import { ProjectsService } from 'src/app/_services/projects.service';
 })
 export class HomeComponent {
 
-  
+
 
   selectedCategory: string = 'frontend';
   skills = [
@@ -23,20 +23,23 @@ export class HomeComponent {
     { name: 'React Native', icon: 'fab fa-react', color: 'text-primary', category: 'frontend' },
     { name: 'Angular', icon: 'fab fa-angular', color: 'text-danger', category: 'frontend' },
     { name: 'Ionic', icon: 'fas fa-mobile-alt', color: 'text-secondary', category: 'frontend' },
+    { name: 'Tailwind CSS', icon: 'fas fa-wind', color: 'text-info', category: 'frontend' },
+    { name: 'Bootstrap', icon: 'fab fa-bootstrap', color: 'text-purple', category: 'frontend' },
+    { name: 'Material UI', icon: 'fas fa-layer-group', color: 'text-primary', category: 'frontend' },
 
     // Backend
     { name: 'Node.js', icon: 'fab fa-node-js', color: 'text-success', category: 'backend' },
     { name: 'Express', icon: 'fas fa-server', color: 'text-dark', category: 'backend' },
     { name: 'REST APIs', icon: 'fas fa-plug', color: 'text-dark', category: 'backend' },
     { name: 'SQL', icon: 'fas fa-database', color: 'text-dark', category: 'backend' },
+    { name: 'PostgreSQL', icon: 'fas fa-database', color: 'text-primary', category: 'backend' },
+    { name: 'MongoDB', icon: 'fas fa-leaf', color: 'text-success', category: 'backend' },
+    { name: 'Redis', icon: 'fas fa-database', color: 'text-danger', category: 'backend' },
     { name: 'Knex.js', icon: 'fas fa-code', color: 'text-dark', category: 'backend' },
     { name: 'AWS', icon: 'fab fa-aws', color: 'text-warning', category: 'backend' },
-    { name: 'MongoDB', icon: 'fas fa-leaf', color: 'text-success', category: 'backend' },
     { name: 'Mongoose', icon: 'fas fa-project-diagram', color: 'text-dark', category: 'backend' },
     { name: 'Socket.io', icon: 'fas fa-bolt', color: 'text-dark', category: 'backend' },
-    { name: 'Redis', icon: 'fas fa-database', color: 'text-danger', category: 'backend' },
     { name: 'Docker', icon: 'fab fa-docker', color: 'text-info', category: 'backend' },
-    { name: 'PostgreSQL', icon: 'fas fa-database', color: 'text-primary', category: 'backend' },
 
     // Other
     { name: 'AI', icon: 'fas fa-robot', color: 'text-info', category: 'other' },
