@@ -1,5 +1,9 @@
-<div class="shadow-sm">
-  <app-header></app-header>
-  <app-nav></app-nav>
+<div class="app-layout">
+  <div class="top-section shadow-sm">
+    <app-header></app-header>
+    <app-nav></app-nav>
+  </div>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
-<router-outlet></router-outlet>
