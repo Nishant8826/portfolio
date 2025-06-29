@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { ThemeService } from '../_services/theme.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnChanges {
 
   typingTexts: string[] = [
     'Full Stack Developer',
@@ -13,12 +14,25 @@ export class HeaderComponent implements OnInit {
     'MEAN Stack Developer'
   ];
   currentText: string = '';
+  currentTheme: string = this.theme.theme;
   private textIndex = 0;
   private charIndex = 0;
   private isDeleting = false;
 
   ngOnInit() {
+    console.log('>>>>',this.currentTheme)
     this.typeEffect();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('theme changed', this.theme.theme)
+    console.log('theme changed', this.currentTheme)
+  }
+
+  constructor(private theme: ThemeService) { }
+
+  themeChnge() {
+    this.theme.changeTheme();
   }
 
   typeEffect() {
@@ -43,5 +57,7 @@ export class HeaderComponent implements OnInit {
 
     setTimeout(() => this.typeEffect(), typingSpeed);
   }
+
+
 
 }
