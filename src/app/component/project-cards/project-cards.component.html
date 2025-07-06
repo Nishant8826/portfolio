@@ -8,13 +8,13 @@
     <div class="card-footer position-relative">
         <div class="d-flex flex-wrap justify-content-center align-items-center">
             <ng-container *ngFor="let tag of project.tags; let i = index">
-                <div *ngIf="showAllTags || i < 3" class="tag me-2 mb-1" [style.background-color]="tag.color">
+                <div *ngIf="showAllTags || i < 2" class="tag me-2 mb-1" [style.background-color]="tag.color">
                     {{ tag }}
                 </div>
             </ng-container>
         </div>
 
-        <button *ngIf="project.tags.length > 3" class="btn btn-sm p-0 border-0 bg-transparent" (click)="toggleTags()"
+        <button *ngIf="project.tags.length > 2" class="btn btn-sm p-0 border-0 bg-transparent" (click)="toggleTags()"
             aria-label="Toggle Tags" style="position: absolute; right: 10px; bottom: 15px;">
             <i class="bi" [ngClass]="showAllTags ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
         </button>

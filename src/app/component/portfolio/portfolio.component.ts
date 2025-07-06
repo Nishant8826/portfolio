@@ -31,6 +31,8 @@ export class PortfolioComponent implements OnInit {
   redis: boolean = false;
   docker: boolean = false;
   psql: boolean = false;
+  reactNative: boolean = false;
+  nativeWind: boolean = false;
 
   constructor(private titleService: Title, private projectService: ProjectsService) {
     this.titleService.setTitle('Portfolio');
@@ -91,6 +93,12 @@ export class PortfolioComponent implements OnInit {
     if (this.psql) {
       filterTags.push(Tag.PSQL);
     }
+    if (this.reactNative) {
+      filterTags.push(Tag.REACT_NATIVE);
+    }
+    if (this.nativeWind) {
+      filterTags.push(Tag.NATIVEWIND);
+    }
 
     this.projects = this.projectService.GetProjectsByFilter(filterTags);
     if (filterTags.length >= 1) {
@@ -107,9 +115,23 @@ export class PortfolioComponent implements OnInit {
     this.css = false;
     this.bootstrap = false;
     this.typescript = false;
+    this.socket = false;
+    this.googleAuth = false;
+    this.materialUI = false;
+    this.genAI = false;
+    this.redux = false;
+    this.mongodb = false;
+    this.firebase = false;
+    this.redis = false;
+    this.docker = false;
+    this.psql = false;
+    this.reactNative = false;
+    this.nativeWind = false;
+
     this.projects = this.projectService.getProjects();
     this.filtering = false;
   }
+
 
 
 }

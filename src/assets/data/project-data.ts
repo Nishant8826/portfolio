@@ -30,10 +30,20 @@ export const PROJECTS: project[] = [
         liveLink: "https://url-shortener-client-lake.vercel.app/",
         summary: "A scalable URL shortener service with a sleek UI, powered by MERN.",
         description: "Big Url Shortener lets you shorten lengthy URLs into convenient short links. Built with Node.js and Redis for fast storage and retrieval, React for a smooth UI, and Docker for simplified deployment, it efficiently converts URLs and tracks usage. Ideal for reducing messy URLs and sharing links effortlessly.",
-        tags: [Tag.NODEJS, Tag.REACT, Tag.REDIS, Tag.DOCKER,Tag.PSQL]
+        tags: [Tag.NODEJS, Tag.REACT, Tag.REDIS, Tag.DOCKER, Tag.PSQL]
     },
     {
         id: 3,
+        name: "Meal App",
+        pictures: ["../../assets/Meal_apk.jpg"],
+        projectLink: "https://github.com/Nishant8826/meal_react_native.git",
+        liveLink: "https://drive.google.com/drive/folders/1NekO9PI-hxnCiMuNcqDiwB1Obkh38fWI?usp=sharing",
+        summary: "React Native Meal App with animations, API, and modern styling.",
+        description: "The Meal App is built using React Native and styled with NativeWind for utility-first design. It features smooth, engaging UI animations powered by Reanimated and fetches meal data from APIs using Axios. The app allows users to explore different meals, view details, and experience seamless navigation. Designed with mobile users in mind, it showcases clean architecture, responsive layouts, and a user-friendly interface ideal for showcasing React Native skills.",
+        tags: [Tag.REACT_NATIVE, Tag.NATIVEWIND, Tag.REANIMATED, Tag.AXIOS,]
+    },
+    {
+        id: 4,
         name: "Angular Quiz",
         pictures: ["../../assets/quiz-1.png", "../../assets/quiz-2.png", "../../assets/quiz-3.png", "../../assets/quiz-4.png"],
         projectLink: "https://github.com/Nishant8826/QuizByAngular.git",
@@ -43,7 +53,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.ANGULAR, Tag.BOOTSTRAP, Tag.TYPESCRIPT]
     },
     {
-        id: 4,
+        id: 5,
         name: "To Do",
         pictures: ["../../assets/to-do.png"],
         projectLink: "https://github.com/Nishant8826/Angular-todo.git",
@@ -53,7 +63,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.ANGULAR, Tag.BOOTSTRAP, Tag.TYPESCRIPT]
     },
     {
-        id: 5,
+        id: 6,
         name: "Daily Goals",
         pictures: ["../../assets/daily-goals.png"],
         projectLink: "https://github.com/Nishant8826/reactProjects/tree/DailyGoals",
@@ -63,7 +73,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.REACT, Tag.CSS]
     },
     {
-        id: 6,
+        id: 7,
         name: "Techy Star",
         pictures: ["../../assets/techy-1.png", "../../assets/techy-2.png", "../../assets/techy-3.png", "../../assets/techy-4.png", "../../assets/techy-5.png"],
         projectLink: "https://github.com/Nishant8826/reactProjects/tree/techyStar",
@@ -73,7 +83,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.REACT, Tag.CSS]
     },
     {
-        id: 7,
+        id: 8,
         name: "Vedio Hub",
         pictures: ["../../assets/vedio-hub-1.png", "../../assets/vedio-hub-2.png"],
         projectLink: "https://github.com/Nishant8826/reactProjects/tree/vedioHub",
@@ -83,7 +93,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.REACT, Tag.CHAKRAUI]
     },
     {
-        id: 8,
+        id: 9,
         name: "Ecommerce",
         pictures: ["../../assets/soon.png"],
         projectLink: "https://github.com/Nishant8826/ecommerce.git",

@@ -6,7 +6,7 @@
             <button class="btn btn-outline-danger mt-2 mb-2" (click)="resetFilter()"
                 [hidden]="!filtering">Reset</button>
         </div>
-        <div [collapse]="isCollapsed" [isAnimated]="true">
+        <div [collapse]="!isCollapsed" [isAnimated]="true">
             <form>
                 <div class="form-group overflow-auto">
                     <div class="row" style="width: 100%;">
@@ -54,6 +54,20 @@
                         </div>
                         <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                             <div class="form-check">
+                                <input type="checkbox" class="form-check-input" (change)="filter()"
+                                    [(ngModel)]="reactNative" name="React-Native">
+                                <label class="form-check-label small">React Native</label>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" (change)="filter()"
+                                    [(ngModel)]="nativeWind" name="NativeWind">
+                                <label class="form-check-label small">Native Wind</label>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                            <div class="form-check">
                                 <input type="checkbox" class="form-check-input" (change)="filter()" [(ngModel)]="redux"
                                     name="React">
                                 <label class="form-check-label small">Redux</label>
@@ -68,15 +82,15 @@
                         </div>
                         <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" (change)="filter()" [(ngModel)]="firebase"
-                                    name="Socket.IO">
+                                <input type="checkbox" class="form-check-input" (change)="filter()"
+                                    [(ngModel)]="firebase" name="Socket.IO">
                                 <label class="form-check-label small">Firebase</label>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" (change)="filter()" [(ngModel)]="mongodb"
-                                    name="Socket.IO">
+                                <input type="checkbox" class="form-check-input" (change)="filter()"
+                                    [(ngModel)]="mongodb" name="Socket.IO">
                                 <label class="form-check-label small">MongoDB</label>
                             </div>
                         </div>
@@ -96,22 +110,22 @@
                         </div>
                         <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" (change)="filter()"
-                                    [(ngModel)]="redis" name="MaterialUI">
+                                <input type="checkbox" class="form-check-input" (change)="filter()" [(ngModel)]="redis"
+                                    name="MaterialUI">
                                 <label class="form-check-label small">Redis</label>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" (change)="filter()"
-                                    [(ngModel)]="docker" name="MaterialUI">
+                                <input type="checkbox" class="form-check-input" (change)="filter()" [(ngModel)]="docker"
+                                    name="MaterialUI">
                                 <label class="form-check-label small">Docker</label>
                             </div>
                         </div>
                         <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" (change)="filter()"
-                                    [(ngModel)]="psql" name="MaterialUI">
+                                <input type="checkbox" class="form-check-input" (change)="filter()" [(ngModel)]="psql"
+                                    name="MaterialUI">
                                 <label class="form-check-label small">PostgreSQL</label>
                             </div>
                         </div>

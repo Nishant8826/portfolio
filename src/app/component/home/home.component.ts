@@ -23,7 +23,7 @@ export class HomeComponent {
     { name: 'React Native', icon: 'fab fa-react', color: 'text-primary', category: 'frontend' },
     { name: 'Angular', icon: 'fab fa-angular', color: 'text-danger', category: 'frontend' },
     { name: 'Ionic', icon: 'fas fa-mobile-alt', color: 'text-secondary', category: 'frontend' },
-    { name: 'Tailwind CSS', icon: 'fas fa-wind', color: 'text-info', category: 'frontend' },
+    { name: 'Tailwind', icon: 'fas fa-wind', color: 'text-info', category: 'frontend' },
     { name: 'Bootstrap', icon: 'fab fa-bootstrap', color: 'text-purple', category: 'frontend' },
     { name: 'Material UI', icon: 'fas fa-layer-group', color: 'text-primary', category: 'frontend' },
 
