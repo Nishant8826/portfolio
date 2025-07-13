@@ -4,6 +4,16 @@ import { project } from '../../app/_models/project';
 export const PROJECTS: project[] = [
     {
         id: 0,
+        name: "Ecommerce",
+        pictures: ["../../assets/ecommerce1.png"],
+        projectLink: "https://github.com/Nishant8826/ecommerce.git",
+        liveLink: "https://ecommerce-theta-three-81.vercel.app/",
+        summary: "Full-featured ecommerce app with cart, payments, and admin dashboard.",
+        description: "This is a MERN stack ecommerce platform featuring product browsing, cart management, user authentication, Stripe payments, and an admin dashboard to manage products and orders. The UI is built with Chakra UI and state is managed using Redux.",
+        tags: [Tag.NODEJS, Tag.REACT, Tag.REDUX, Tag.STRIPE, Tag.FIREBASE, Tag.MONGODB]
+    },
+    {
+        id: 1,
         name: "Code Reviewer",
         pictures: ["../../assets/code-reviewer-1.png", "../../assets/code-reviewer-2.png"],
         projectLink: "https://github.com/Nishant8826/code-reviwer-client.git",
@@ -13,7 +23,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.GeminiApi, Tag.REACT, Tag.REDUX, Tag.NODEJS]
     },
     {
-        id: 1,
+        id: 2,
         name: "Watsapp Clone",
         pictures: ["../../assets/w1.png", "../../assets/w2.png", "../../assets/w3.png", "../../assets/w4.png", "../../assets/w5.png", "../../assets/w6.png"],
         projectLink: "https://github.com/Nishant8826/watsapp_clone.git",
@@ -23,7 +33,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.REACT, Tag.NODEJS, Tag.MONGODB, Tag.OAuth2, Tag.SOCKETIO, Tag.MATERIALUI]
     },
     {
-        id: 2,
+        id: 3,
         name: "Big Url Shortner",
         pictures: ["../../assets/big-ly.png"],
         projectLink: "https://github.com/Nishant8826/url-shortener-client.git",
@@ -33,7 +43,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.NODEJS, Tag.REACT, Tag.REDIS, Tag.DOCKER, Tag.PSQL]
     },
     {
-        id: 3,
+        id: 4,
         name: "Meal App",
         pictures: ["../../assets/Meal_apk.jpg"],
         projectLink: "https://github.com/Nishant8826/meal_react_native.git",
@@ -43,7 +53,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.REACT_NATIVE, Tag.NATIVEWIND, Tag.REANIMATED, Tag.AXIOS,]
     },
     {
-        id: 4,
+        id: 5,
         name: "Angular Quiz",
         pictures: ["../../assets/quiz-1.png", "../../assets/quiz-2.png", "../../assets/quiz-3.png", "../../assets/quiz-4.png"],
         projectLink: "https://github.com/Nishant8826/QuizByAngular.git",
@@ -53,7 +63,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.ANGULAR, Tag.BOOTSTRAP, Tag.TYPESCRIPT]
     },
     {
-        id: 5,
+        id: 6,
         name: "To Do",
         pictures: ["../../assets/to-do.png"],
         projectLink: "https://github.com/Nishant8826/Angular-todo.git",
@@ -63,7 +73,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.ANGULAR, Tag.BOOTSTRAP, Tag.TYPESCRIPT]
     },
     {
-        id: 6,
+        id: 7,
         name: "Daily Goals",
         pictures: ["../../assets/daily-goals.png"],
         projectLink: "https://github.com/Nishant8826/reactProjects/tree/DailyGoals",
@@ -73,7 +83,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.REACT, Tag.CSS]
     },
     {
-        id: 7,
+        id: 8,
         name: "Techy Star",
         pictures: ["../../assets/techy-1.png", "../../assets/techy-2.png", "../../assets/techy-3.png", "../../assets/techy-4.png", "../../assets/techy-5.png"],
         projectLink: "https://github.com/Nishant8826/reactProjects/tree/techyStar",
@@ -83,7 +93,7 @@ export const PROJECTS: project[] = [
         tags: [Tag.REACT, Tag.CSS]
     },
     {
-        id: 8,
+        id: 9,
         name: "Vedio Hub",
         pictures: ["../../assets/vedio-hub-1.png", "../../assets/vedio-hub-2.png"],
         projectLink: "https://github.com/Nishant8826/reactProjects/tree/vedioHub",
@@ -92,14 +102,4 @@ export const PROJECTS: project[] = [
         description: "Simple video platform that plays videos in a categorized layout.",
         tags: [Tag.REACT, Tag.CHAKRAUI]
     },
-    {
-        id: 9,
-        name: "Ecommerce",
-        pictures: ["../../assets/soon.png"],
-        projectLink: "https://github.com/Nishant8826/ecommerce.git",
-        liveLink: "",
-        summary: "Full-featured ecommerce app with cart, payments, and admin dashboard.",
-        description: "This is a MERN stack ecommerce platform featuring product browsing, cart management, user authentication, Stripe payments, and an admin dashboard to manage products and orders. The UI is built with Chakra UI and state is managed using Redux.",
-        tags: [Tag.NODEJS, Tag.REDUX, Tag.STRIPE, Tag.FIREBASE, Tag.MONGODB, Tag.TYPESCRIPT, Tag.REACT, Tag.CHAKRAUI]
-    }
 ];
