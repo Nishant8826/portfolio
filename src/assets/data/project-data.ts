@@ -6,8 +6,8 @@ export const PROJECTS: project[] = [
         id: 0,
         name: "Ecommerce",
         pictures: ["../../assets/ecommerce1.png"],
-        projectLink: "https://github.com/Nishant8826/ecommerce.git",
-        liveLink: "https://ecommerce-theta-three-81.vercel.app/",
+        projectLink: "https://github.com/Nishant8826/ecom.git",
+        liveLink: "https://ecom-theta-snowy.vercel.app/",
         summary: "Full-featured ecommerce app with cart, payments, and admin dashboard.",
         description: "This is a MERN stack ecommerce platform featuring product browsing, cart management, user authentication, Stripe payments, and an admin dashboard to manage products and orders. The UI is built with Chakra UI and state is managed using Redux.",
         tags: [Tag.NODEJS, Tag.REACT, Tag.REDUX, Tag.STRIPE, Tag.FIREBASE, Tag.MONGODB]
