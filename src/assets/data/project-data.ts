@@ -36,11 +36,11 @@ export const PROJECTS: project[] = [
         id: 3,
         name: "Big Url Shortner",
         pictures: ["../../assets/big-ly.png"],
-        projectLink: "https://github.com/Nishant8826/url-shortener-client.git",
-        liveLink: "https://url-shortener-client-lake.vercel.app/",
-        summary: "A scalable URL shortener service with a sleek UI, powered by MERN.",
-        description: "Big Url Shortener lets you shorten lengthy URLs into convenient short links. Built with Node.js and Redis for fast storage and retrieval, React for a smooth UI, and Docker for simplified deployment, it efficiently converts URLs and tracks usage. Ideal for reducing messy URLs and sharing links effortlessly.",
-        tags: [Tag.NODEJS, Tag.REACT, Tag.REDIS, Tag.DOCKER, Tag.PSQL]
+        projectLink: "https://github.com/Nishant8826/url_shortner.git",
+        liveLink: "https://url-shortner-sej6.onrender.com/",
+        summary: "A scalable URL shortener service with SSR.",
+        description: "A full-featured, scalable URL shortening service built with Node.js, EJS, and MongoDB. It supports server-side rendering (SSR) for fast page loads, user authentication, URL analytics, and short link management.",
+        tags: [Tag.NODEJS, Tag.SSR, Tag.EJS, Tag.MONGODB]
     },
     {
         id: 4,

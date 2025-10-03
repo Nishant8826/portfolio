@@ -24,6 +24,8 @@ export class Tag {
     static readonly PSQL = new Tag('PostgreSQL', '#336791'); // PostgreSQL blue
     static readonly REDIS = new Tag('Redis', '#D82C20'); // Redis red
     static readonly DOCKER = new Tag('Docker', '#2496ED'); // Docker blue
+    static readonly EJS = new Tag('EJS', '#A91CFF'); // EJS purple
+    static readonly SSR = new Tag('SSR', '#FF7F50'); // SSR coral/orange
 
     constructor(private readonly key: string, public readonly color: string) { }
 

@@ -31,6 +31,8 @@ export class HomeComponent {
     { name: 'Node.js', icon: 'fab fa-node-js', color: 'text-success', category: 'backend' },
     { name: 'Express', icon: 'fas fa-server', color: 'text-dark', category: 'backend' },
     { name: 'REST APIs', icon: 'fas fa-plug', color: 'text-dark', category: 'backend' },
+    { name: 'EJS', icon: 'fas fa-file-code', color: 'text-purple', category: 'backend' },
+    { name: 'SSR', icon: 'fas fa-server', color: 'text-warning', category: 'backend' },
     { name: 'SQL', icon: 'fas fa-database', color: 'text-dark', category: 'backend' },
     { name: 'PostgreSQL', icon: 'fas fa-database', color: 'text-primary', category: 'backend' },
     { name: 'MongoDB', icon: 'fas fa-leaf', color: 'text-success', category: 'backend' },

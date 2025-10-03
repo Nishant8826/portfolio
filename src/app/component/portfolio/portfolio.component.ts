@@ -33,6 +33,8 @@ export class PortfolioComponent implements OnInit {
   psql: boolean = false;
   reactNative: boolean = false;
   nativeWind: boolean = false;
+  ssr: boolean = false;
+  ejs: boolean = false;
 
   constructor(private titleService: Title, private projectService: ProjectsService) {
     this.titleService.setTitle('Portfolio');
@@ -98,6 +100,12 @@ export class PortfolioComponent implements OnInit {
     }
     if (this.nativeWind) {
       filterTags.push(Tag.NATIVEWIND);
+    }
+    if (this.ssr) {
+      filterTags.push(Tag.SSR);
+    }
+    if (this.ejs) {
+      filterTags.push(Tag.EJS);
     }
 
     this.projects = this.projectService.GetProjectsByFilter(filterTags);
